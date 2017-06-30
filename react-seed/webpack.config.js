@@ -5,7 +5,7 @@ var webpack = require('webpack'),
 		config;
 
 config = {
-	entry: APP_DIR + '/index.js',
+	entry: APP_DIR + '/index.jsx',
 	output: {
 		path: BUILD_DIR,
 		filename: 'bundle.js'
