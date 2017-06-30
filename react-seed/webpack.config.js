@@ -5,6 +5,13 @@ var webpack = require('webpack'),
 		config;
 
 config = {
+	loaders: [
+		{
+			test: /\.jsx?/,
+			include: APP_DIR,
+			loader: 'babel'
+		}
+	],
 	entry: APP_DIR + '/index.jsx',
 	output: {
 		path: BUILD_DIR,
