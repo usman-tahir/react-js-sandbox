@@ -15,7 +15,7 @@ config = {
 			}
 		]
 	},
-	entry: APP_DIR + '/Game.jsx',
+	entry: APP_DIR + '/index.jsx',
 	output: {
 		path: BUILD_DIR,
 		filename: 'bundle.js'

@@ -22,4 +22,4 @@ class Game extends React.Component {
   }
 }
 
-render(<Game/>, document.getElementById('app'));
+export default Game;
