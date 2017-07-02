@@ -6,4 +6,4 @@ class GoodbyeComponent extends React.Component {
 	}
 }
 
-export default GoodbyComponent;
+export default GoodbyeComponent;
