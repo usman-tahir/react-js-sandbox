@@ -60,3 +60,11 @@ ul {
   padding: 20px;
   white-space: pre-wrap;
 }
+
+.x {
+  color: blue;
+}
+
+.o {
+  color: red;
+}
