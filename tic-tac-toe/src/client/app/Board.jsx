@@ -1,4 +1,5 @@
-import React from 'React';
+import React from 'react';
+import Square from './Square.jsx';
 
 class Board extends React.Component {
   render() {
@@ -30,3 +31,5 @@ class Board extends React.Component {
     return <Square/>
   }
 }
+
+export default Board;
