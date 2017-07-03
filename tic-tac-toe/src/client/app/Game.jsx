@@ -24,7 +24,6 @@ class Game extends React.Component {
     } else {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
-    console.log(status);
 
     return(
       <div className="game">
@@ -60,8 +59,6 @@ class Game extends React.Component {
       }]),
       xIsNext: !this.state.xIsNext
     });
-
-    console.log(this.state);
   }
 
   calculateWinner(squares) {
