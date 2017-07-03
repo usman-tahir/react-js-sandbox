@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import Board from './Board.jsx';
 
 class Game extends React.Component {
+
   constructor() {
     super();
     this.state = {
@@ -10,7 +11,6 @@ class Game extends React.Component {
         squares: Array(9).fill(null)
       }],
       xIsNext: true,
-      turnsLeft: 9,
       stepNumber: 0
     };
   }
@@ -33,7 +33,7 @@ class Game extends React.Component {
     if (winner) {
       status = 'Winner: ' + winner;
     } else {
-      if (this.state.turnsLeft === 0) {
+      if (this.state.stepNumber === 9) {
         status = 'The game ended in a tie.';
       } else {
         status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
@@ -73,7 +73,6 @@ class Game extends React.Component {
         squares: squares
       }]),
       xIsNext: !this.state.xIsNext,
-      turnsLeft: this.state.turnsLeft - 1,
       stepNumber: history.length
     });
   }
