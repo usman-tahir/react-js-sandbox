@@ -9,7 +9,8 @@ class Game extends React.Component {
       history: [{
         squares: Array(9).fill(null)
       }],
-      xIsNext: true
+      xIsNext: true,
+      turnsLeft: 9
     };
   }
 
@@ -22,7 +23,11 @@ class Game extends React.Component {
     if (winner) {
       status = 'Winner: ' + winner;
     } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      if (this.state.turnsLeft === 0) {
+        status = 'The game ended in a tie.';
+      } else {
+        status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
+      }
     }
 
     return(
@@ -57,7 +62,8 @@ class Game extends React.Component {
       history: history.concat([{
         squares: squares
       }]),
-      xIsNext: !this.state.xIsNext
+      xIsNext: !this.state.xIsNext,
+      turnsLeft: this.state.turnsLeft - 1
     });
   }
 
