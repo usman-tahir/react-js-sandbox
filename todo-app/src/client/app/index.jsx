@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import TodoForm from './TodoForm.jsx';
 
 class App extends React.Component {
+
 	render() {
 		return (
 			<div>
@@ -10,6 +11,7 @@ class App extends React.Component {
 			</div>
 		);
 	}
+	
 }
 
 render(<App/>, document.getElementById('app'));
