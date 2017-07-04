@@ -1,4 +1,5 @@
 import React from 'react';
+import Todo from './Todo.jsx';
 
 const TodoList = ({todos, remove}) => {
 
@@ -8,7 +9,7 @@ const TodoList = ({todos, remove}) => {
     )
   });
   return (
-    <ul>{todoNode}</ul>
+    <div className="list-group" style={{marginTop: '30px'}}>{todoNode}</div>
   );
 
 }
