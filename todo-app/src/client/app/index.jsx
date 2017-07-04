@@ -1,11 +1,12 @@
 import React from 'react';
 import {render} from 'react-dom';
+import TodoForm from './TodoForm.jsx';
 
 class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<p>hello world</p>
+				<TodoForm/>
 			</div>
 		);
 	}
