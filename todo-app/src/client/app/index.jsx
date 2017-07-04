@@ -1,7 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
 import Title from './Title.jsx';
-// import Todo from './Todo.jsx';
 import TodoList from './TodoList.jsx';
 import TodoForm from './TodoForm.jsx';
 
