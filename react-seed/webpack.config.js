@@ -1,24 +1,28 @@
+
 var webpack = require('webpack'),
 		path = require('path'),
-		BUILD_DIR = path.resolve(__dirname, 'src/client/public'),
-		APP_DIR = path.resolve(__dirname, 'src/client/app'),
+		DIST_DIR = path.resolve(__dirname, 'dist'),
+		SRC_DIR = path.resolve(__dirname, 'src'),
 		config;
 
 config = {
+	entry: SRC_DIR + '/app/index.js',
+	output: {
+		path: DIST_DIR + '/app',
+		filename: 'bundle.js',
+		publicPath: '/app/'
+	},
 	module: {
 		loaders: [
 			{
 				test: /\.jsx?/,
-				include: APP_DIR,
+				include: SRC_DIR,
 				loader: 'babel-loader',
-				exclude: /node_modules/
+				query: {
+					presets: ['react', 'es2015', 'stage-2']
+				}
 			}
 		]
-	},
-	entry: APP_DIR + '/index.jsx',
-	output: {
-		path: BUILD_DIR,
-		filename: 'bundle.js'
 	}
 };
 
