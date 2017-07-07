@@ -1,11 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import styles from './styles.module.css';
 
 const App = React.createClass({
   render: function() {
-    return (<div>Yelp clone</div>)
+    return (<div className={styles['container']}>Yelp clone</div>)
   }
 });
 
 const mountNode = document.querySelector('#root');
-ReactDOM.render(<App />, mountNode);
+ReactDOM.render(<App/>, mountNode);
