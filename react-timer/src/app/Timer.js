@@ -4,17 +4,17 @@ class Timer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 1
+      count: 0
     }
   }
 
   render() {
     return(
       <div className='timer'>
-        <h1>this.state.count</h1>
+        <h1>{this.state.count}</h1>
         <div>
           <button onClick={this.startTimer.bind(this)}>Start</button>
-          <button onClick={this.stopTimer.bind(this)}Stop</button>
+          <button onClick={this.stopTimer.bind(this)}>Stop</button>
         </div>
       </div>
     );
