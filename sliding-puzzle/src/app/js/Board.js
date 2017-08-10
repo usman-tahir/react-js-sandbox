@@ -23,7 +23,7 @@ class Board extends React.Component {
           <span>
             {<Cell value={value} clickHandler={this.cellClickHandler.bind(this, index)}/>}
             <br>
-          </spam>
+          </span>
         );
       }
       return <Cell value={value} clickHandler={this.cellClickHandler.bind(this, index)}/>;

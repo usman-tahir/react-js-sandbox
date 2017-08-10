@@ -1,5 +1,5 @@
 {
-  "name": "ReactJS Sliding Puzzle",
+  "name": "sliding-puzzle",
   "version": "1.0.0",
   "description": "A ReactJS sliding puzzle with a built-in Webpack server",
   "main": "index.js",
