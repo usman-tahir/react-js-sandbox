@@ -1,4 +1,5 @@
 import React from 'react';
+import Board from './Board';
 
 class Puzzle extends React.Component {
   constructor(props) {
@@ -51,3 +52,5 @@ class Puzzle extends React.Component {
     return temp;
   }
 }
+
+export default Puzzle;

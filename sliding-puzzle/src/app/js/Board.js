@@ -1,4 +1,5 @@
 import React from 'react';
+import Tile from './Tile';
 
 class Board extends React.Component {
   componentWillMount() {
@@ -21,12 +22,12 @@ class Board extends React.Component {
       if ((index + 1) % this.props.size === 0) {
         return(
           <span>
-            {<Cell value={value} clickHandler={this.cellClickHandler.bind(this, index)}/>}
-            <br>
+            {<Tile value={value} clickHandler={this.cellClickHandler.bind(this, index)}/>}
+            <br/>
           </span>
         );
       }
-      return <Cell value={value} clickHandler={this.cellClickHandler.bind(this, index)}/>;
+      return <Tile value={value} clickHandler={this.cellClickHandler.bind(this, index)}/>;
     });
     return(
       <div className='board'>
