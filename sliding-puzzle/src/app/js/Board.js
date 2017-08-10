@@ -83,3 +83,5 @@ class Board extends React.Component {
     this.props.updateBoard(board);
   }
 }
+
+export default Board;
