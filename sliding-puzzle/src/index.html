@@ -4,7 +4,46 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="app/css/styles.css">
+    <style>
+      html, body, #app {
+        background: azure;
+        height: 100%;
+      }
+
+      .puzzle h1 {
+        font-size: 48px;
+      }
+
+      .puzzle h1, .puzzle p {
+        margin: 10px;
+      }
+
+      .puzzle input {
+        margin-left: 10px;
+      }
+
+      .board {
+        font-family: 'sans-serif';
+        min-width: 300px;
+        margin: 10px;
+      }
+
+      .board .square {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 60px;
+        height: 60px;
+        background: lightgreen;
+        border: 1px solid darkgreen;
+        line-height: 60px;
+        text-align: center;
+      }
+
+      .board .square.zero {
+        background: beige;
+        color: beige;
+      }
+    </style>
 		<title>ReactJS Slide Puzzle</title>
 	</head>
 	<body>
