@@ -40,8 +40,8 @@ class Board extends React.Component {
     const zeroIndex = board.indexOf(0);
     const zeroCoordinate = this.getCoordinateFromIndex(zeroIndex, size);
     const possibleTopIndex = zeroCoordinate.row > 0 ? this.getIndexFromCoordinate(zeroCoordinate.row - 1, zeroCoordinate.column, size) : null;
-    const possiblRightIndex = zeroCoordinate.column < size ? this.getIndexFromCoordinate(zeroCoordinate.row, zeroCoordinate.column + 1, size) : null;
-    const possiblBottomIndex = zeroCoordinate.row < size ? this.getIndexFromCoordinate(zeroCoordinate.row + 1, zeroCoordinate.column, size) : null;
+    const possibleRightIndex = zeroCoordinate.column < size ? this.getIndexFromCoordinate(zeroCoordinate.row, zeroCoordinate.column + 1, size) : null;
+    const possibleBottomIndex = zeroCoordinate.row < size ? this.getIndexFromCoordinate(zeroCoordinate.row + 1, zeroCoordinate.column, size) : null;
     const possibleLeftIndex = zeroCoordinate.column > 0 ? this.getIndexFromCoordinate(zeroCoordinate.row, zeroCoordinate.column - 1, size) : null;
 
     this.setState({

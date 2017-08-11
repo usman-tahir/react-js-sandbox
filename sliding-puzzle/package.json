@@ -4,7 +4,8 @@
   "description": "A ReactJS sliding puzzle with a built-in Webpack server",
   "main": "index.js",
   "scripts": {
-    "start": "npm run build",
+    "start": "npm run build && npm run css",
+    "css": "cp src/app/css/styles.css dist/css/styles.css",
     "build": "webpack -d && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline",
     "build:prod": "webpack -p && cp src/index.html dist/index.html",
     "clean": "rm -r dist/"
